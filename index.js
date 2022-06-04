@@ -11,6 +11,7 @@ const btn = document.querySelectorAll(".btn");
 
 //stopwatch
 const btn2 = document.querySelectorAll(".btn2"); // buttons
+const pause = document.querySelector(".stop");
 const timer = document.querySelector(".time")
 let seconds = 0;
 let interval = null; 
@@ -89,12 +90,19 @@ btn2.forEach((i)=> {
   i.addEventListener('click', (e) => {
     const style = e.currentTarget.classList;
       if (style.contains('start')) {
+        pause.innerHTML = "PAUSE"
         start();
       // timerFunc();
     } else if (style.contains('stop')) {
+      if (e.currentTarget.innerHTML == "PAUSE"){
+        e.currentTarget.innerHTML = "UNPAUSE"
+      } else {
+        e.currentTarget.innerHTML = "PAUSE"
+      }
       stop()
     } else {
       stop()
+      pause.innerHTML = "PAUSE"
       time = "00:00:00"
      seconds = 0;
     timer.textContent = time;
