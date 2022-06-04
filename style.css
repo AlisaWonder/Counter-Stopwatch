@@ -93,7 +93,7 @@ select {
 
 .container{
   background-color: rgb(233, 255, 247);
-  padding: 50px;
+  padding: 30px;
   width: 100%;
   margin-top: 40px;
   display: flex;
@@ -115,3 +115,29 @@ select {
   background:#44c767;
 
 }
+
+@media only screen and (max-width: 968px)  {
+  .main h2 {
+    font-size: 25px;
+  }
+  .button {
+    width: 100px;
+    font-size:12px;
+  }
+
+}
+
+@media only screen and (max-width: 767px)  {
+ .counter-buttons {
+   display: flex;
+ 
+   flex-direction: column;
+ }
+
+ .button {
+  margin: 5px;
+}
+}
+
+
+
